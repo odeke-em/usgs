@@ -9,6 +9,11 @@ const (
 	Past30Days
 )
 
+func (p Period) String() string {
+	str, _ := p.summaryString()
+	return str
+}
+
 func (p Period) summaryString() (string, bool) {
 	switch p {
 	default:
